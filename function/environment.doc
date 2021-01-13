@@ -1,0 +1,51 @@
+系统的环境变量
+name = ALLUSERSPROFILE ,valve = C:\ProgramData 
+name = APPDATA ,valve = C:\Users\EDZ\AppData\Roaming 
+name = CLASSPATH ,valve = .;C:\Program Files\Java\jdk1.8.0_111\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_111\lib\tools.jar; 
+name = COMMONPROGRAMFILES ,valve = C:\Program Files\Common Files 
+name = COMMONPROGRAMFILES(X86) ,valve = C:\Program Files (x86)\Common Files 
+name = COMMONPROGRAMW6432 ,valve = C:\Program Files\Common Files 
+name = COMPUTERNAME ,valve = DESKTOP-734Q54B 
+name = COMSPEC ,valve = C:\Windows\system32\cmd.exe 
+name = DRIVERDATA ,valve = C:\Windows\System32\Drivers\DriverData 
+name = ENV ,valve = DEV 
+name = HOMEDRIVE ,valve = C: 
+name = HOMEPATH ,valve = \Users\EDZ 
+name = IDEA_INITIAL_DIRECTORY ,valve = C:\Users\EDZ\Desktop 
+name = JAVA_HOME ,valve = C:\Program Files\Java\jdk1.8.0_111 
+name = LOCALAPPDATA ,valve = C:\Users\EDZ\AppData\Local 
+name = LOGONSERVER ,valve = \\DESKTOP-734Q54B 
+name = M2_HOME ,valve = D:\config\apache-maven-3.6.0 
+name = MAVEN_HOME ,valve = D:\config\apache-maven-3.6.3 
+name = MYSQL_HOME ,valve = D:\config\mysql-5.7.28-winx64 
+name = NUMBER_OF_PROCESSORS ,valve = 8 
+name = ONEDRIVE ,valve = C:\Users\EDZ\OneDrive 
+name = OS ,valve = Windows_NT 
+name = PATH ,valve = C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;D:\config\apache-maven-3.6.0\bin;D:\config\apache-maven-3.6.3\bin;C:\Program Files\Java\jdk1.8.0_111\bin;C:\Program Files\Java\jdk1.8.0_111\jre\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\python\Scripts\;D:\config\python\Scripts\;D:\config\python\;C:\Users\EDZ\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\Program Files\python; 
+name = PATHEXT ,valve = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC 
+name = PROCESSOR_ARCHITECTURE ,valve = AMD64 
+name = PROCESSOR_IDENTIFIER ,valve = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel 
+name = PROCESSOR_LEVEL ,valve = 6 
+name = PROCESSOR_REVISION ,valve = 9e0d 
+name = PROGRAMDATA ,valve = C:\ProgramData 
+name = PROGRAMFILES ,valve = C:\Program Files 
+name = PROGRAMFILES(X86) ,valve = C:\Program Files (x86) 
+name = PROGRAMW6432 ,valve = C:\Program Files 
+name = PSMODULEPATH ,valve = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules 
+name = PUBLIC ,valve = C:\Users\Public 
+name = PYCHARM_DISPLAY_PORT ,valve = 63342 
+name = PYCHARM_HOSTED ,valve = 1 
+name = PYTHONIOENCODING ,valve = UTF-8 
+name = PYTHONPATH ,valve = D:\wisfarm\my_python_project;C:\Users\EDZ\AppData\Roaming\JetBrains\IntelliJIdea2020.1\plugins\python\helpers\pycharm_matplotlib_backend;C:\Users\EDZ\AppData\Roaming\JetBrains\IntelliJIdea2020.1\plugins\python\helpers\pycharm_display 
+name = PYTHONUNBUFFERED ,valve = 1 
+name = SESSIONNAME ,valve = Console 
+name = SYSTEMDRIVE ,valve = C: 
+name = SYSTEMROOT ,valve = C:\Windows 
+name = TEMP ,valve = C:\Users\EDZ\AppData\Local\Temp 
+name = TMP ,valve = C:\Users\EDZ\AppData\Local\Temp 
+name = USERDOMAIN ,valve = DESKTOP-734Q54B 
+name = USERDOMAIN_ROAMINGPROFILE ,valve = DESKTOP-734Q54B 
+name = USERNAME ,valve = EDZ 
+name = USERPROFILE ,valve = C:\Users\EDZ 
+name = VBOX_MSI_INSTALL_PATH ,valve = D:\VirtualBox-6.1.2\ 
+name = WINDIR ,valve = C:\Windows 
