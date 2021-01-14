@@ -44,6 +44,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="dict.get" />
+          <option value="int.append" />
         </list>
       </option>
     </inspection_tool>
