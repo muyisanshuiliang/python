@@ -1,3 +1,6 @@
+EXTEND = [1].extend([])
+
+
 class Solution(object):
     # def findCircleNum(self, isConnected):
     #     """
@@ -76,7 +79,6 @@ class Solution(object):
 
     def dfs(self, isConnected):
         neighbor = []
-        city = list()
         count = 0
         is_visited = [False] * len(isConnected)
         for item_inx in list(range(len(isConnected))):
@@ -162,7 +164,92 @@ isConnected = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]  # 15
 ]
 
+def dfs(isConnected):
+    # 获取当前节点的邻居节点
+    def _get_first_neighbor(isConnected, cur_point):
+        j = len(isConnected) - 1
+        neighbor = []
+        while j >= 0:
+            if isConnected[cur_point][j] == 1 and cur_point != j:
+                neighbor.append(j)
+            j -= 1
+        return neighbor
+
+    result = ''
+    # 存储邻居节点
+    neighbor_stack = []
+    # 存储节点的访问状态，默认都是未被访问状态
+    is_visited = [False] * len(isConnected)
+    for cur_point in range(len(isConnected)):
+        # 如果当前节点已经被访问，则对下一个节点进行访问
+        if is_visited[cur_point]:
+            continue
+        # 当前节点置为已被访问状态
+        is_visited[cur_point] = True
+        result = result + str(cur_point) + '------>'
+        # 当前节点的所有邻居节点压入栈中
+        neighbor_stack.extend(_get_first_neighbor(isConnected, cur_point))
+        # 如果邻居节点为空，说明当前已经是最后的一个节点，否则依次对灵雎节点进行处理
+        while neighbor_stack.__len__() != 0:
+            # 获取邻居节点
+            pop = neighbor_stack.pop()
+            # 如果邻居节点已经被访问，则继续处理下一个邻居节点
+            if is_visited[pop]:
+                continue
+            else:
+                # 对邻居节点进行遍历
+                result = result + str(pop) + '------>'
+                # 修改邻居节点的访问状态为已访问
+                is_visited[pop] = True
+                # 获取邻居节点的邻居节点
+                neighbor_stack.extend(_get_first_neighbor(isConnected, pop))
+    return result
+
+def bfs(isConnected):
+    # 获取当前节点的邻居节点
+    def _get_first_neighbor(isConnected, cur_point):
+        j = 0
+        neighbor = []
+        while j < len(isConnected):
+            if isConnected[cur_point][j] == 1 and cur_point != j:
+                neighbor.append(j)
+            j += 1
+        return neighbor
+
+    result = ''
+    # 存储邻居节点
+    neighbor_stack = []
+    # 存储节点的访问状态，默认都是未被访问状态
+    is_visited = [False] * len(isConnected)
+    for cur_point in range(len(isConnected)):
+        # 如果当前节点已经被访问，则对下一个节点进行访问
+        if is_visited[cur_point]:
+            continue
+        # 当前节点置为已被访问状态
+        is_visited[cur_point] = True
+        result = result + str(cur_point) + '------>'
+        # 当前节点的所有邻居节点压入栈中
+        neighbor_stack.extend(_get_first_neighbor(isConnected, cur_point))
+        # 如果邻居节点为空，说明当前已经是最后的一个节点，否则依次对灵雎节点进行处理
+        while neighbor_stack.__len__() != 0:
+            # 获取邻居节点
+            pop = neighbor_stack.pop(0)
+            # 如果邻居节点已经被访问，则继续处理下一个邻居节点
+            if is_visited[pop]:
+                continue
+            else:
+                # 对邻居节点进行遍历
+                result = result + str(pop) + '------>'
+                # 修改邻居节点的访问状态为已访问
+                is_visited[pop] = True
+                # 获取邻居节点的邻居节点
+                neighbor_stack.extend(_get_first_neighbor(isConnected, pop))
+    return result
 # isConnected = [[1, 1, 0], [1, 1, 0], [0, 0, 1]]
-solution = Solution()
+# solution = Solution()
 # print(solution.findCircleNum(isConnected))
-print(solution.dfs(isConnected))
+# print(solution.dfs(isConnected))
+
+
+print("dfs结果：" + dfs(isConnected))
+print("dfs结果：" + bfs(isConnected))
