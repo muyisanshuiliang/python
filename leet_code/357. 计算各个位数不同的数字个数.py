@@ -10,6 +10,27 @@
 
 class Solution:
     def countNumbersWithUniqueDigits(self, n: int) -> int:
+        """
+        res[0 ] = 1
+        res[1 ] = 9
+        此时高位【1-9】，个位【0-9】，但是每个数有一个重复的元素，要摒弃，故总数
+        res[2 ] = res[1 ] * (10- (n -1)) = res[1 ] + 9 * 9
+        此时高位不重复的元素是res[2],占两个数字，故个位只能是另外的8个数之一
+        res[3 ] = res[2 ] * (10- (n -1)) = res[2 ] + 9 * 9 * 8
+        此时高位不重复的元素是res[3],占两个数字，故个位只能是另外的7个数之一，后面的依次类推
+        res[4 ] = res[3 ] * (10- (n -1)) = res[3 ] + 9 * 9 * 8 * 7
+        res[5 ] = res[4 ] * (10- (n -1)) = res[4 ] + 9 * 9 * 8 * 7 * 6
+        res[6 ] = res[5 ] * (10- (n -1)) = res[5 ] + 9 * 9 * 8 * 7 * 6 * 5
+        res[7 ] = res[6 ] * (10- (n -1)) = res[6 ] + 9 * 9 * 8 * 7 * 6 * 5 * 4
+        res[8 ] = res[7 ] * (10- (n -1)) = res[7 ] + 9 * 9 * 8 * 7 * 6 * 5 * 4 * 3
+        res[9 ] = res[8 ] * (10- (n -1)) = res[8 ] + 9 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2
+        res[10] = res[9 ] * (10- (n -1)) = res[9 ] + 9 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1
+        res[11] = res[10] * (10- (n -1)) = res[10] + 9 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 * 0 = 0
+        res[12] = res[11] * (10- (n -1)) = res[11] + 9 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 * 0 * -1
+        :param n:
+        :return:
+        """
+
         if n == 0: return 1
         res = 10
         k = 9
@@ -21,4 +42,4 @@ class Solution:
         return res
 
 
-print(Solution().countNumbersWithUniqueDigits(4))
+print(Solution().countNumbersWithUniqueDigits(3))
