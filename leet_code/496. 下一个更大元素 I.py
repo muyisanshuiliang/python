@@ -70,5 +70,5 @@ class Solution:
 
 
 solution = Solution()
-print(solution.nextGreaterElement(nums1=[4, 1, 2], nums2=[1, 3, 2, 3, 6, 7, 1, 4, 2]))
+print(solution.nextGreaterElement(nums1=[4, 1, 2], nums2=[1, 3, 2, 6, 7, 4]))
 print(solution.nextGreaterElement(nums1=[2, 4], nums2=[1, 2, 3, 4]))
